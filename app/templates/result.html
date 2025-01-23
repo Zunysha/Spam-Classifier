@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Classifier Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .result h2 {
+            color: #333;
+        }
+        .result p {
+            color: #555;
+            font-size: 1.1em;
+        }
+        a {
+            display: block;
+            margin: 20px 0;
+            text-align: center;
+            color: #5cb85c;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Spam Classifier Result</h1>
+        <div class="result">
+            <h2>Prediction: {{ prediction }}</h2>
+            <p>Entered Text: {{ text }}</p>
+        </div>
+        <a href="{{ url_for('home') }}">Classify another text</a>
+    </div>
+</body>
+</html>
